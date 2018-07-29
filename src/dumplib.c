@@ -24,7 +24,7 @@ __attribute__((constructor)) void constructor(void) {
     struct sigaction oldact;
     struct sigaction act = {0};
     act.sa_handler = &dump;
-    int rtn = sigaction(SIGINT, &act, &oldact);
+    int rtn = sigaction(SIGABRT, &act, &oldact);
     if (-1==rtn){
         strerror_r(errno, error_message, ERROR_MESSAGE_SIZE-1);
         write(STDERR_FILENO, error_message, ERROR_MESSAGE_SIZE);
