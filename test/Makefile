@@ -21,4 +21,4 @@ test: $(TARGET)
 	./test.sh
 
 clean:
-	-rm $(TESTLIB) $(TARGET) core* test.dmp
+	-rm $(TESTLIB) $(TARGET) core* test.dmp stdout

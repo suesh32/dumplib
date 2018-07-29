@@ -1,6 +1,6 @@
 TARGET=libdumplib.so
 
-CFLAGS	+= -g
+CFLAGS	+= -g -D_POSIX_C_SOURCE=200809L
 LDFLAGS	+= -shared -fPIC 
 
 $(TARGET): *.h *.c
