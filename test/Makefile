@@ -3,7 +3,7 @@ TARGET	=dumptest
 
 INCLUDES += -I../src -I.
 CFLAGS	+= -g $(INCLUDES)
-LIBFLAGS +=  -shared -fPIC -L../src -ldumplib -Wl,-z,defs
+LIBFLAGS +=  -shared -fPIC -L../src -Wl,-z,defs
 LDFLAGS	+= 
 TESTEE_SRC	= ../src/*.h ../src/*.c
 LIBSRC	= testlib.c
