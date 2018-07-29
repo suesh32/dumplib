@@ -18,7 +18,7 @@ $(TESTLIB): $(TESTEE_SRC) $(LIBSRC)
 	$(CC) $(CFLAGS) $(LIBFLAGS) -o $@ $(LIBSRC) -ldumplib
 
 test: $(TARGET)
-	LD_LIBRARY_PATH=../src:. ./$(TARGET)
+	./test.sh
 
 clean:
-	-rm $(TESTLIB) $(TARGET)
+	-rm $(TESTLIB) $(TARGET) core* test.dmp
